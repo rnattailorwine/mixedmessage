@@ -10,4 +10,11 @@ function generateRandomMessage() {
   return randomBeginning + ' ' + randomMiddle + ' ' + randomEnd;
 }
 
-console.log(generateRandomMessage());
+function updateMessageContainer() {
+  const messageContainer = document.getElementById('message-container');
+  const randomMessage = generateRandomMessage();
+  messageContainer.textContent = randomMessage;
+}
+
+// Rufe die Funktion auf, um die initiale Nachricht anzuzeigen
+updateMessageContainer();
